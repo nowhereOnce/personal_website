@@ -1,0 +1,309 @@
+* {
+  /*border: 1px solid black;*/
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: white;
+}
+
+.welcome-section {
+  width: 100%;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  width: 350px;
+  margin-right: 20px;
+}
+nav ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  color: black;
+  font-weight: 600;
+}
+
+nav h3 {
+  margin-left: 20px;
+}
+
+/*.background-gradient{
+    
+    position: absolute;
+    background: linear-gradient(
+      0deg,
+      black,
+      white 45%
+    );
+    width: 100%;
+    height: 101vh;
+    z-index: -1;
+  }*/
+
+.welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.prof-pic {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 380px;
+  min-width: 270px;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+.prof-pic img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+.button-container1 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
+.button-container1 a {
+  padding: 12px;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.profile-info {
+  margin-right: 20px;
+}
+.welcome-section h1 {
+  font-size: 4rem;
+}
+.welcome-section h2 {
+  font-size: 3rem;
+}
+
+.About-me,
+.Contact {
+  background-color: black;
+}
+.text {
+  color: white;
+  margin: auto;
+  padding: 50px;
+  font-size: 1.5rem;
+  max-width: 1100px;
+}
+.text-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pure-text {
+  width: 120%;
+  padding-right: 50px;
+}
+.images {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.fac,
+.unam-logo {
+  width: 100%;
+}
+.fac {
+  margin-top: 60px;
+  border-radius: 20px;
+  /*margin-bottom: 20px;*/
+}
+
+hr {
+  margin: 50px 0;
+  color: white;
+}
+
+/*Media Query para seccion About me*/
+@media (max-width: 800px) {
+  .pure-text {
+    width: 100%;
+    padding-right: 0;
+  }
+  .text-image {
+    flex-direction: column;
+  }
+  .images {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+  .unam-logo {
+    width: 80%;
+  }
+  .fac {
+    margin-top: 25px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p,
+  li,
+  a {
+    font-size: 1.2rem;
+  }
+}
+
+/*para luego*/
+@media (max-width: 700px) {
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .profile-info h1 {
+    font-size: 3rem;
+  }
+  .profile-info h2 {
+    font-size: 2rem;
+  }
+  .prof-pic {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    width: 100%;
+    height: 280px;
+    padding: 20px;
+    position: relative;
+    top: 20px;
+  }
+  .prof-pic img {
+    width: 250px;
+    height: 250px;
+  }
+  .profile-info {
+    margin: 0;
+    padding: 0 40px;
+  }
+  .button-container1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .prof-pic img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+  margin: auto;
+  max-width: 800px;
+  font-size: 1.2rem;
+}
+
+.album {
+  padding: 20px;
+  border-radius: 20px;
+}
+.album:hover {
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.album img {
+  width: 100%;
+}
+.albums a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .albums {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .albums {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects {
+  background-color: white;
+}
+.text2 {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  margin: auto;
+  padding: 50px;
+  font-size: 1.5rem;
+  max-width: 1100px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.button-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
+.button-container2 a,
+.button-container2 .discord {
+  padding: 12px;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  font-weight: normal;
+  text-decoration: none;
+}
